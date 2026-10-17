@@ -9,36 +9,28 @@
     {
       "beats": 4,
       "left": {
-        "position": "C3",
         "notes": [
           {
-            "pitch": "C3",
-            "finger": 5
+            "pitch": "C3"
           },
           {
-            "pitch": "E3",
-            "finger": 3
+            "pitch": "E3"
           },
           {
-            "pitch": "G3",
-            "finger": 1
+            "pitch": "G3"
           }
         ]
       },
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "C4",
-            "finger": 1
+            "pitch": "C4"
           },
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           },
           {
-            "pitch": "G4",
-            "finger": 5
+            "pitch": "G4"
           }
         ]
       }
@@ -46,36 +38,28 @@
     {
       "beats": 4,
       "left": {
-        "position": "F3",
         "notes": [
           {
-            "pitch": "F3",
-            "finger": 5
+            "pitch": "F3"
           },
           {
-            "pitch": "A3",
-            "finger": 3
+            "pitch": "A3"
           },
           {
-            "pitch": "C4",
-            "finger": 1
+            "pitch": "C4"
           }
         ]
       },
       "right": {
-        "position": "F4",
         "notes": [
           {
-            "pitch": "F4",
-            "finger": 1
+            "pitch": "F4"
           },
           {
-            "pitch": "A4",
-            "finger": 3
+            "pitch": "A4"
           },
           {
-            "pitch": "C5",
-            "finger": 5
+            "pitch": "C5"
           }
         ]
       }
@@ -83,36 +67,28 @@
     {
       "beats": 4,
       "left": {
-        "position": "G3",
         "notes": [
           {
-            "pitch": "G3",
-            "finger": 5
+            "pitch": "G3"
           },
           {
-            "pitch": "B3",
-            "finger": 3
+            "pitch": "B3"
           },
           {
-            "pitch": "D4",
-            "finger": 1
+            "pitch": "D4"
           }
         ]
       },
       "right": {
-        "position": "G4",
         "notes": [
           {
-            "pitch": "G4",
-            "finger": 1
+            "pitch": "G4"
           },
           {
-            "pitch": "B4",
-            "finger": 3
+            "pitch": "B4"
           },
           {
-            "pitch": "D5",
-            "finger": 5
+            "pitch": "D5"
           }
         ]
       }
@@ -120,36 +96,28 @@
     {
       "beats": 4,
       "left": {
-        "position": "C3",
         "notes": [
           {
-            "pitch": "C3",
-            "finger": 5
+            "pitch": "C3"
           },
           {
-            "pitch": "E3",
-            "finger": 3
+            "pitch": "E3"
           },
           {
-            "pitch": "G3",
-            "finger": 1
+            "pitch": "G3"
           }
         ]
       },
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "C4",
-            "finger": 1
+            "pitch": "C4"
           },
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           },
           {
-            "pitch": "G4",
-            "finger": 5
+            "pitch": "G4"
           }
         ]
       }

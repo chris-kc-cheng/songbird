@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://songbird.example/song.schema.json",
-  "title": "Songbird song v1",
-  "description": "C-major beginner lessons. Events are sequential, hands and notes within each event sound simultaneously. Omitted/null hands rest. A beat is a quarter note. Semantic checks additionally enforce unique fingers, matching five-finger placements, and non-overlapping hands.",
+  "title": "Songbird song v1 / v2",
+  "description": "Timed piano notes with runtime fingering. Version 1 uses event-length notes; version 2 supports independent durations and MIDI velocities. Up to 4096 events.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -15,7 +15,10 @@
   ],
   "properties": {
     "version": {
-      "const": 1
+      "enum": [
+        1,
+        2
+      ]
     },
     "title": {
       "type": "string",
@@ -42,16 +45,20 @@
       "enum": [
         "4/4",
         "3/4",
-        "2/4"
+        "2/4",
+        "3/8"
       ]
     },
     "events": {
       "type": "array",
       "minItems": 1,
-      "maxItems": 512,
-      "items": {
-        "$ref": "#/$defs/event"
-      }
+      "maxItems": 4096
+    },
+    "pickup": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMaximum": 4,
+      "description": "Pickup length in quarter-note beats; must be shorter than one measure."
     }
   },
   "$defs": {
@@ -59,20 +66,13 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "pitch",
-        "finger"
+        "pitch"
       ],
       "properties": {
         "pitch": {
           "type": "string",
-          "pattern": "^[A-G][3-5]$",
-          "description": "Natural piano pitch, C3\u2013B5. C4 is middle C."
-        },
-        "finger": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 5,
-          "description": "1 thumb, 2 index, 3 middle, 4 ring, 5 little. Must match the declared five-finger position."
+          "pattern": "^([A-G][#b]?[0-7]|C8)$",
+          "description": "Piano pitch A0-C8, including sharps/flats. Runtime checks enforce the physical piano range."
         }
       }
     },
@@ -83,15 +83,9 @@
       ],
       "additionalProperties": false,
       "required": [
-        "position",
         "notes"
       ],
       "properties": {
-        "position": {
-          "type": "string",
-          "pattern": "^([A-G][34]|[CDE]5)$",
-          "description": "Lowest of five consecutive white keys. Right hand: fingers 1\u20135 ascending; left hand: 5\u20131 ascending."
-        },
         "notes": {
           "type": "array",
           "minItems": 1,
@@ -99,7 +93,7 @@
           "items": {
             "$ref": "#/$defs/note"
           },
-          "description": "Notes played simultaneously by this hand."
+          "description": "Up to five simultaneous piano notes within an octave. Finger placement is generated."
         }
       }
     },
@@ -131,6 +125,102 @@
           "$ref": "#/$defs/hand"
         }
       }
+    },
+    "noteV2": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pitch",
+        "duration"
+      ],
+      "properties": {
+        "pitch": {
+          "type": "string",
+          "pattern": "^([A-G][#b]?[0-7]|C8)$",
+          "description": "Piano pitch A0-C8, including sharps/flats. Runtime checks enforce the physical piano range."
+        },
+        "duration": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 64,
+          "description": "Independent note length in quarter-note beats, including tuplets."
+        },
+        "velocity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 127
+        }
+      }
+    },
+    "handV2": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "notes"
+      ],
+      "properties": {
+        "notes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/$defs/noteV2"
+          },
+          "description": "Up to five simultaneous piano notes within an octave. Finger placement is generated."
+        }
+      }
+    },
+    "eventV2": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "beats"
+      ],
+      "properties": {
+        "beats": {
+          "type": "number",
+          "minimum": 0.0006510416666666666,
+          "maximum": 16
+        },
+        "left": {
+          "$ref": "#/$defs/handV2"
+        },
+        "right": {
+          "$ref": "#/$defs/handV2"
+        }
+      }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "version": {
+            "const": 1
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "events": {
+            "items": {
+              "$ref": "#/$defs/event"
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "events": {
+            "items": {
+              "$ref": "#/$defs/eventV2"
+            }
+          }
+        }
+      }
+    }
+  ]
 }

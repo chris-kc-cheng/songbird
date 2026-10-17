@@ -1,0 +1,17 @@
+{
+  "source": "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/",
+  "edition": "Mutopia-2015/08/18-931; Breitkopf & Hartel, 1888",
+  "license": "Public Domain",
+  "midiSha256": "1c12c21c7bbf4cf163896732672648a69d497636059837abd153c71abe50215a",
+  "ticksPerQuarter": 384,
+  "notesByHand": {
+    "right": 605,
+    "left": 436
+  },
+  "repeatsExpanded": true,
+  "sourceBeats": 156.5,
+  "eventCount": 785,
+  "totalBeats": 187.0,
+  "lowest": "A1",
+  "highest": "E7"
+}

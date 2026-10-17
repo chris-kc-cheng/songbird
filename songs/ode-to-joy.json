@@ -9,11 +9,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           }
         ]
       }
@@ -21,11 +19,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           }
         ]
       }
@@ -33,11 +29,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "F4",
-            "finger": 4
+            "pitch": "F4"
           }
         ]
       }
@@ -45,11 +39,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "G4",
-            "finger": 5
+            "pitch": "G4"
           }
         ]
       }
@@ -57,11 +49,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "G4",
-            "finger": 5
+            "pitch": "G4"
           }
         ]
       }
@@ -69,11 +59,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "F4",
-            "finger": 4
+            "pitch": "F4"
           }
         ]
       }
@@ -81,11 +69,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           }
         ]
       }
@@ -93,11 +79,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "D4",
-            "finger": 2
+            "pitch": "D4"
           }
         ]
       }
@@ -105,11 +89,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "C4",
-            "finger": 1
+            "pitch": "C4"
           }
         ]
       }
@@ -117,11 +99,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "C4",
-            "finger": 1
+            "pitch": "C4"
           }
         ]
       }
@@ -129,11 +109,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "D4",
-            "finger": 2
+            "pitch": "D4"
           }
         ]
       }
@@ -141,11 +119,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           }
         ]
       }
@@ -153,11 +129,9 @@
     {
       "beats": 1.5,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           }
         ]
       }
@@ -165,11 +139,9 @@
     {
       "beats": 0.5,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "D4",
-            "finger": 2
+            "pitch": "D4"
           }
         ]
       }
@@ -177,11 +149,9 @@
     {
       "beats": 2,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "D4",
-            "finger": 2
+            "pitch": "D4"
           }
         ]
       }
@@ -189,11 +159,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           }
         ]
       }
@@ -201,11 +169,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           }
         ]
       }
@@ -213,11 +179,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "F4",
-            "finger": 4
+            "pitch": "F4"
           }
         ]
       }
@@ -225,11 +189,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "G4",
-            "finger": 5
+            "pitch": "G4"
           }
         ]
       }
@@ -237,11 +199,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "G4",
-            "finger": 5
+            "pitch": "G4"
           }
         ]
       }
@@ -249,11 +209,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "F4",
-            "finger": 4
+            "pitch": "F4"
           }
         ]
       }
@@ -261,11 +219,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           }
         ]
       }
@@ -273,11 +229,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "D4",
-            "finger": 2
+            "pitch": "D4"
           }
         ]
       }
@@ -285,11 +239,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "C4",
-            "finger": 1
+            "pitch": "C4"
           }
         ]
       }
@@ -297,11 +249,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "C4",
-            "finger": 1
+            "pitch": "C4"
           }
         ]
       }
@@ -309,11 +259,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "D4",
-            "finger": 2
+            "pitch": "D4"
           }
         ]
       }
@@ -321,11 +269,9 @@
     {
       "beats": 1,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "E4",
-            "finger": 3
+            "pitch": "E4"
           }
         ]
       }
@@ -333,11 +279,9 @@
     {
       "beats": 1.5,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "D4",
-            "finger": 2
+            "pitch": "D4"
           }
         ]
       }
@@ -345,11 +289,9 @@
     {
       "beats": 0.5,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "C4",
-            "finger": 1
+            "pitch": "C4"
           }
         ]
       }
@@ -357,11 +299,9 @@
     {
       "beats": 2,
       "right": {
-        "position": "C4",
         "notes": [
           {
-            "pitch": "C4",
-            "finger": 1
+            "pitch": "C4"
           }
         ]
       }
