@@ -1,0 +1,370 @@
+{
+  "version": 1,
+  "title": "Ode to Joy",
+  "composer": "Ludwig van Beethoven · 1824",
+  "category": "melody",
+  "tempo": 76,
+  "timeSignature": "4/4",
+  "events": [
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "E4",
+            "finger": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "E4",
+            "finger": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "F4",
+            "finger": 4
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "G4",
+            "finger": 5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "G4",
+            "finger": 5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "F4",
+            "finger": 4
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "E4",
+            "finger": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "D4",
+            "finger": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "C4",
+            "finger": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "C4",
+            "finger": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "D4",
+            "finger": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "E4",
+            "finger": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1.5,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "E4",
+            "finger": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "D4",
+            "finger": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "D4",
+            "finger": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "E4",
+            "finger": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "E4",
+            "finger": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "F4",
+            "finger": 4
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "G4",
+            "finger": 5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "G4",
+            "finger": 5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "F4",
+            "finger": 4
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "E4",
+            "finger": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "D4",
+            "finger": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "C4",
+            "finger": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "C4",
+            "finger": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "D4",
+            "finger": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "E4",
+            "finger": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1.5,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "D4",
+            "finger": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "C4",
+            "finger": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "C4",
+            "finger": 1
+          }
+        ]
+      }
+    }
+  ]
+}

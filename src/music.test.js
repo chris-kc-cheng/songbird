@@ -1,6 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {parseScore,midi,frequency,demo} from './music.js';
-test('pitch conversion matches piano tuning and octaves',()=>{assert.equal(midi('C4'),60);assert.equal(midi('F#4'),66);assert.equal(frequency('A4'),440);assert.equal(frequency('A5'),880);});
-test('score import accepts whitespace and commas and rejects malformed or excessive input',()=>{assert.deepEqual(parseScore('C4, D4\nF#4 G4'),['C4','D4','F#4','G4']);for(const value of ['', 'C4', 'C4 <script>', 'C4 C9', Array(129).fill('C4').join(' ')])assert.throws(()=>parseScore(value));});
-test('demo contains playable notes',()=>{assert.equal(demo.length,16);demo.forEach(n=>assert.ok(Number.isFinite(frequency(n))));});
+import {readFileSync} from 'node:fs';
+import {songs,midi,frequency,validateSong,handPitches} from './music.js';
+const copy=()=>structuredClone(songs[4]);
+test('pitch conversion matches piano tuning',()=>{assert.equal(midi('C4'),60);assert.equal(frequency('A4'),440);assert.equal(frequency('A5'),880);assert.throws(()=>midi('C9'));assert.equal(midi('F#4'),66);});
+test('all built-in lessons and exported examples validate',()=>{assert.equal(songs.length,6);songs.forEach(s=>assert.equal(validateSong(s),s));for(const file of ['first-chords','ode-to-joy'])validateSong(JSON.parse(readFileSync(new URL(`../songs/${file}.json`,import.meta.url))));});
+test('mirrored five-finger positions put thumbs toward the middle',()=>{assert.deepEqual(handPitches('C3','left').map(n=>n.finger),[5,4,3,2,1]);assert.deepEqual(handPitches('C4','right').map(n=>n.finger),[1,2,3,4,5]);assert.equal(handPitches('C3','left')[4].pitch,'G3');assert.throws(()=>handPitches('G5','right'));});
+test('chords use comfortable thirds with 5-3-1 and 1-3-5',()=>{for(const e of songs[4].events){assert.deepEqual(e.left.notes.map(n=>n.finger),[5,3,1]);assert.deepEqual(e.right.notes.map(n=>n.finger),[1,3,5]);for(const side of ['left','right'])assert.equal(midi(e[side].notes[2].pitch)-midi(e[side].notes[0].pitch),7);}});
+test('rejects impossible fingering, duplicated fingers and overlapping hands',()=>{let s=copy();s.events[0].right.notes[0].finger=5;assert.throws(()=>validateSong(s),/does not match/);s=copy();s.events[0].right.notes.push(s.events[0].right.notes[0]);assert.throws(()=>validateSong(s),/two notes/);s=copy();s.events[0].left=structuredClone(s.events[0].right);s.events[0].left.notes.forEach(n=>n.finger=6-n.finger);assert.throws(()=>validateSong(s),/overlap/);});
+test('rejects bad timing, unknown fields, and invalid structures',()=>{for(const mutation of [s=>s.tempo=0,s=>s.events[0].beats=.3,s=>s.events=[],s=>s.events[0].right.notes=null,s=>s.version=2,s=>s.timeSignature='7/8',s=>s.extra=true,s=>s.events[0].right.position='G5',s=>s.title=' ']){const s=copy();mutation(s);assert.throws(()=>validateSong(s));}});
+test('rests and variable duration events are supported',()=>{const s=copy();s.events=[{beats:.5},{beats:3,left:null,right:null},s.events[0]];assert.equal(validateSong(s),s);});

@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "title": "First chords · C, F & G",
+  "composer": "Songbird · original exercise",
+  "category": "chords",
+  "tempo": 50,
+  "timeSignature": "4/4",
+  "events": [
+    {
+      "beats": 4,
+      "left": {
+        "position": "C3",
+        "notes": [
+          {
+            "pitch": "C3",
+            "finger": 5
+          },
+          {
+            "pitch": "E3",
+            "finger": 3
+          },
+          {
+            "pitch": "G3",
+            "finger": 1
+          }
+        ]
+      },
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "C4",
+            "finger": 1
+          },
+          {
+            "pitch": "E4",
+            "finger": 3
+          },
+          {
+            "pitch": "G4",
+            "finger": 5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 4,
+      "left": {
+        "position": "F3",
+        "notes": [
+          {
+            "pitch": "F3",
+            "finger": 5
+          },
+          {
+            "pitch": "A3",
+            "finger": 3
+          },
+          {
+            "pitch": "C4",
+            "finger": 1
+          }
+        ]
+      },
+      "right": {
+        "position": "F4",
+        "notes": [
+          {
+            "pitch": "F4",
+            "finger": 1
+          },
+          {
+            "pitch": "A4",
+            "finger": 3
+          },
+          {
+            "pitch": "C5",
+            "finger": 5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 4,
+      "left": {
+        "position": "G3",
+        "notes": [
+          {
+            "pitch": "G3",
+            "finger": 5
+          },
+          {
+            "pitch": "B3",
+            "finger": 3
+          },
+          {
+            "pitch": "D4",
+            "finger": 1
+          }
+        ]
+      },
+      "right": {
+        "position": "G4",
+        "notes": [
+          {
+            "pitch": "G4",
+            "finger": 1
+          },
+          {
+            "pitch": "B4",
+            "finger": 3
+          },
+          {
+            "pitch": "D5",
+            "finger": 5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 4,
+      "left": {
+        "position": "C3",
+        "notes": [
+          {
+            "pitch": "C3",
+            "finger": 5
+          },
+          {
+            "pitch": "E3",
+            "finger": 3
+          },
+          {
+            "pitch": "G3",
+            "finger": 1
+          }
+        ]
+      },
+      "right": {
+        "position": "C4",
+        "notes": [
+          {
+            "pitch": "C4",
+            "finger": 1
+          },
+          {
+            "pitch": "E4",
+            "finger": 3
+          },
+          {
+            "pitch": "G4",
+            "finger": 5
+          }
+        ]
+      }
+    }
+  ]
+}
