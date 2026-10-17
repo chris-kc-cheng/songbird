@@ -3,3 +3,5 @@ mobile.png
 node_modules/
 
 __pycache__/
+
+_site/

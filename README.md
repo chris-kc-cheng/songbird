@@ -2,6 +2,12 @@
 
 A beginner piano practice app with a cartoon songbird mascot, grand-staff / numbered / letter notation, synthesized audio, timed melodies and chords, and translucent **both-hand silhouettes directly over the piano keys**.
 
+[Open Songbird](https://chris-kc-cheng.github.io/songbird/)
+
+![Latest Songbird screenshot](assets/screenshots/latest.png)
+
+The screenshot is refreshed automatically from the current app on every deployment.
+
 ## Run
 
 Use Python 3 and Node 22+ (Node 24 recommended). No dependency installation or build is needed. The browser must support module workers and JSON import attributes.
@@ -10,7 +16,7 @@ Use Python 3 and Node 22+ (Node 24 recommended). No dependency installation or b
 npm start
 ```
 
-The static server listens on port 3000. Click Play to enable browser audio. Piano sound is always enabled; songs stop at the ending and do not loop. Toggle the metronome in Playback to hear it immediately, even with the song paused. It alternates short synthesized wooden tick/tock strikes, with a stronger downbeat. Its separate dry audio path keeps the beat clear over the piano. It continues until toggled off, with clicks that follow the tempo (3/8 uses eighth-note pulses). Space toggles playback outside form controls. Click a white or black key to try a note. Hide hands exposes key labels. Tempo changes pause playback so the next event starts with predictable timing. F?r Elise uses this edition's 72 quarter-note BPM by default.
+The static server listens on port 3000. Click Play to enable browser audio. Piano sound is always enabled; songs stop at the ending and do not loop. Toggle the metronome in Playback to hear it immediately, even with the song paused. It alternates short synthesized wooden tick/tock strikes, with a stronger downbeat. Its separate dry audio path keeps the beat clear over the piano. It continues until toggled off, with clicks that follow the tempo (3/8 uses eighth-note pulses). Space toggles playback outside form controls. Click a white or black key to try a note. Hide hands exposes key labels. Tempo changes pause playback so the next event starts with predictable timing. Für Elise uses this edition's 72 quarter-note BPM by default.
 
 ## Included lessons
 
@@ -105,3 +111,20 @@ The web app manifest uses the existing Songbird mascot in padded 192px and 512px
 Hands use a connected cartoon silhouette with flat pastel colors, bold outlines, rounded cuffs and numbered fingertip pads. All white-key contacts, including the short fixed-length thumb, share one depth; black-key contacts sit farther back. The keyboard viewport centers on the active hand positions while key dimensions remain fixed.
 
 The metronome has an independent continuous clock: play, pause, reset, song completion and song selection do not stop or restart its tick/tock cycle. Tempo/meter updates adjust the running clock; only its toggle disables it (or an isolated audio failure).
+
+## GitHub Pages and screenshots
+
+The [Pages workflow](.github/workflows/pages.yml) tests and deploys `main` on every push, and can also be run manually from the Actions tab. This repository uses **GitHub Actions** as its Pages source (Settings > Pages > Build and deployment). The workflow requires permission to push its generated screenshot to `main`; branch protection must allow that bot update.
+
+Every deployment captures the default song in Chromium at 1600 x 1000, saves `assets/screenshots/latest.png`, and commits it when changed so this README shows the current interface. Screenshot commits use the built-in Actions token and do not trigger another deployment. The site artifact includes only public application files.
+
+To update the screenshot locally:
+
+```sh
+npm ci
+npx playwright install chromium
+npm run screenshot
+npm run build:pages
+```
+
+The screenshot check serves the app under `/songbird/` to verify GitHub Pages asset paths, waits for the keyboard and hands, and fails on browser errors or missing local assets. Keep the latest screenshot in this README whenever the UI changes.
