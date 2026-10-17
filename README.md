@@ -114,7 +114,17 @@ The metronome has an independent continuous clock: play, pause, reset, song comp
 
 ## GitHub Pages and screenshots
 
-The [Pages workflow](.github/workflows/pages.yml) tests and deploys `main` on every push, and can also be run manually from the Actions tab. This repository uses **GitHub Actions** as its Pages source (Settings > Pages > Build and deployment). The workflow requires permission to push its generated screenshot to `main`; branch protection must allow that bot update.
+The [Pages workflow](.github/workflows/pages.yml) automatically tests and deploys every push to `main`. Manual runs are also available from the Actions tab; only `main` can deploy.
+
+Set up GitHub Pages once:
+
+1. Open [Settings > Pages](https://github.com/chris-kc-cheng/songbird/settings/pages).
+2. Under **Build and deployment > Source**, select **GitHub Actions**. There is no branch or folder selector for this source, and no additional workflow template is needed.
+3. Push changes to `main`, then check **Actions > Deploy GitHub Pages**. After the build and deploy jobs succeed, visit [Songbird](https://chris-kc-cheng.github.io/songbird/).
+
+GitHub Actions must be enabled for the repository under **Settings > Actions > General**. The workflow declares its own contents-write, Pages-write and identity-token permissions. Branch protection must allow the generated screenshot bot commit to `main`. For deployments without manual approval, the `github-pages` environment must not require reviewers (Settings > Environments > github-pages).
+
+This setup follows [GitHub's custom Pages workflow instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
 
 Every deployment captures the default song in Chromium at 1600 x 1000, saves `assets/screenshots/latest.png`, and commits it when changed so this README shows the current interface. Screenshot commits use the built-in Actions token and do not trigger another deployment. The site artifact includes only public application files.
 

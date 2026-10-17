@@ -1,9 +1,14 @@
 name: Deploy GitHub Pages
 
 on:
+  # Every push to main tests, refreshes the screenshot, and deploys the site.
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 concurrency:
   group: pages
@@ -11,6 +16,8 @@ concurrency:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -40,6 +47,8 @@ jobs:
           path: _site
 
   deploy:
+    if: github.ref == 'refs/heads/main'
+    timeout-minutes: 10
     needs: build
     runs-on: ubuntu-latest
     permissions:
