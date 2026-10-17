@@ -2,9 +2,23 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {songs,midi,frequency,validateSong,generateFingering,handPitches,keyPosition,performanceEvents,createFingeringPlan,advanceFingering} from './music.js';
-const copy=()=>structuredClone(songs[4]);
+// Keep legacy import coverage independent of the version 2 bundled library.
+const copy=()=>{
+ const song=structuredClone(songs[4]);song.version=1;
+ for(const event of song.events)for(const side of ['left','right'])for(const note of event[side]?.notes??[])delete note.duration;
+ return song;
+};
 test('pitch conversion matches piano tuning',()=>{assert.equal(midi('C4'),60);assert.equal(frequency('A4'),440);assert.equal(frequency('A5'),880);assert.throws(()=>midi('C9'));assert.equal(midi('F#4'),66);});
-test('all built-in lessons and exported examples validate',()=>{assert.equal(songs.length,11);songs.forEach(s=>assert.equal(validateSong(s),s));for(const file of ['first-chords','ode-to-joy','fur-elise'])validateSong(JSON.parse(readFileSync(new URL(`../songs/${file}.json`,import.meta.url))));});
+test('all library entries load the same version 2 JSON used for downloads',()=>{
+ const library=JSON.parse(readFileSync(new URL('../songs/library.json',import.meta.url)));
+ assert.equal(library.length,11);assert.equal(new Set(library).size,library.length);
+ assert.equal(songs.length,library.length);
+ library.forEach((file,i)=>{
+  const source=JSON.parse(readFileSync(new URL(`../songs/${file}`,import.meta.url)));
+  assert.equal(source.version,2);assert.equal(validateSong(source),source);
+  assert.deepEqual(songs[i],source);
+ });
+});
 test('mirrored five-finger positions put thumbs toward the middle',()=>{assert.deepEqual(handPitches('C3','left').map(n=>n.finger),[5,4,3,2,1]);assert.deepEqual(handPitches('C4','right').map(n=>n.finger),[1,2,3,4,5]);assert.equal(handPitches('C3','left')[4].pitch,'G3');assert.throws(()=>handPitches('G7','right'));});
 test('chords use comfortable thirds with 5-3-1 and 1-3-5',()=>{for(const e of generateFingering(songs[4]).events){assert.deepEqual(e.left.notes.map(n=>n.finger),[5,3,1]);assert.deepEqual(e.right.notes.map(n=>n.finger),[1,3,5]);for(const side of ['left','right'])assert.equal(midi(e[side].notes[2].pitch)-midi(e[side].notes[0].pitch),7);}});
 test('rejects stored fingering, duplicate pitches and crossing parts',()=>{

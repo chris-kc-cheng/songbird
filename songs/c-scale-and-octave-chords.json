@@ -1,0 +1,201 @@
+{
+  "version": 2,
+  "title": "C scale & octave chords",
+  "composer": "Songbird - original exercise",
+  "category": "chords",
+  "tempo": 60,
+  "timeSignature": "4/4",
+  "events": [
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "F4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "G4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "A4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "B4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C5",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1
+    },
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 2
+          },
+          {
+            "pitch": "A4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 2
+          },
+          {
+            "pitch": "B4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 2
+          },
+          {
+            "pitch": "C5",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 4,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 4
+          },
+          {
+            "pitch": "E4",
+            "duration": 4
+          },
+          {
+            "pitch": "G4",
+            "duration": 4
+          }
+        ]
+      }
+    }
+  ]
+}

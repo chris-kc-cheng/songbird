@@ -1,0 +1,307 @@
+{
+  "version": 2,
+  "title": "Brahms Lullaby",
+  "composer": "Johannes Brahms - simplified theme in C",
+  "category": "melody",
+  "tempo": 66,
+  "timeSignature": "3/4",
+  "events": [
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 3,
+      "right": {
+        "notes": [
+          {
+            "pitch": "G4",
+            "duration": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 3,
+      "right": {
+        "notes": [
+          {
+            "pitch": "G4",
+            "duration": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "G4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C5",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "B4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "right": {
+        "notes": [
+          {
+            "pitch": "A4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "A4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "right": {
+        "notes": [
+          {
+            "pitch": "G4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "right": {
+        "notes": [
+          {
+            "pitch": "F4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 3,
+      "right": {
+        "notes": [
+          {
+            "pitch": "F4",
+            "duration": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "F4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "B4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "A4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "G4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "B4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 3,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C5",
+            "duration": 3
+          }
+        ]
+      }
+    }
+  ]
+}

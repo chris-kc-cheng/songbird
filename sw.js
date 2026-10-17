@@ -1,6 +1,12 @@
-const CACHE='songbird-v8';
-const ASSETS=["./", "index.html", "style.css", "manifest.webmanifest", "song.schema.json", "assets/songbird.png", "assets/icons/songbird-192.png", "assets/icons/songbird-512.png", "src/app.js", "src/hand-geometry.js", "src/metronome.js", "src/notation.js", "src/music.js", "src/piano-audio.js", "src/planner-worker.js", "songs/first-chords.json", "songs/fur-elise.json", "songs/ode-to-joy.json"];
-self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)));});
+const CACHE='songbird-v9';
+const ASSETS=["./", "index.html", "style.css", "manifest.webmanifest", "song.schema.json", "assets/songbird.png", "assets/icons/songbird-192.png", "assets/icons/songbird-512.png", "src/app.js", "src/hand-geometry.js", "src/metronome.js", "src/notation.js", "src/music.js", "src/piano-audio.js", "src/planner-worker.js", "songs/library.json"];
+self.addEventListener('install',event=>{event.waitUntil((async()=>{
+ const cache=await caches.open(CACHE);
+ await cache.addAll(ASSETS);
+ const response=await cache.match(new URL('songs/library.json',self.location.href).href);
+ const library=await response.json();
+ await cache.addAll(library.map(file=>new URL(`songs/${file}`,self.location.href).href));
+})());});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('songbird-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',event=>{
  if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;

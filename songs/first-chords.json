@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "title": "First chords · C, F & G",
   "composer": "Songbird · original exercise",
   "category": "chords",
@@ -11,26 +11,32 @@
       "left": {
         "notes": [
           {
-            "pitch": "C3"
+            "pitch": "C3",
+            "duration": 4
           },
           {
-            "pitch": "E3"
+            "pitch": "E3",
+            "duration": 4
           },
           {
-            "pitch": "G3"
+            "pitch": "G3",
+            "duration": 4
           }
         ]
       },
       "right": {
         "notes": [
           {
-            "pitch": "C4"
+            "pitch": "C4",
+            "duration": 4
           },
           {
-            "pitch": "E4"
+            "pitch": "E4",
+            "duration": 4
           },
           {
-            "pitch": "G4"
+            "pitch": "G4",
+            "duration": 4
           }
         ]
       }
@@ -40,26 +46,32 @@
       "left": {
         "notes": [
           {
-            "pitch": "F3"
+            "pitch": "F3",
+            "duration": 4
           },
           {
-            "pitch": "A3"
+            "pitch": "A3",
+            "duration": 4
           },
           {
-            "pitch": "C4"
+            "pitch": "C4",
+            "duration": 4
           }
         ]
       },
       "right": {
         "notes": [
           {
-            "pitch": "F4"
+            "pitch": "F4",
+            "duration": 4
           },
           {
-            "pitch": "A4"
+            "pitch": "A4",
+            "duration": 4
           },
           {
-            "pitch": "C5"
+            "pitch": "C5",
+            "duration": 4
           }
         ]
       }
@@ -69,26 +81,32 @@
       "left": {
         "notes": [
           {
-            "pitch": "G3"
+            "pitch": "G3",
+            "duration": 4
           },
           {
-            "pitch": "B3"
+            "pitch": "B3",
+            "duration": 4
           },
           {
-            "pitch": "D4"
+            "pitch": "D4",
+            "duration": 4
           }
         ]
       },
       "right": {
         "notes": [
           {
-            "pitch": "G4"
+            "pitch": "G4",
+            "duration": 4
           },
           {
-            "pitch": "B4"
+            "pitch": "B4",
+            "duration": 4
           },
           {
-            "pitch": "D5"
+            "pitch": "D5",
+            "duration": 4
           }
         ]
       }
@@ -98,26 +116,32 @@
       "left": {
         "notes": [
           {
-            "pitch": "C3"
+            "pitch": "C3",
+            "duration": 4
           },
           {
-            "pitch": "E3"
+            "pitch": "E3",
+            "duration": 4
           },
           {
-            "pitch": "G3"
+            "pitch": "G3",
+            "duration": 4
           }
         ]
       },
       "right": {
         "notes": [
           {
-            "pitch": "C4"
+            "pitch": "C4",
+            "duration": 4
           },
           {
-            "pitch": "E4"
+            "pitch": "E4",
+            "duration": 4
           },
           {
-            "pitch": "G4"
+            "pitch": "G4",
+            "duration": 4
           }
         ]
       }

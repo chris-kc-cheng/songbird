@@ -31,7 +31,30 @@ try{
  if(errors.length)throw Error(errors.join('\n'));
  await mkdir('assets/screenshots',{recursive:true});
  await page.screenshot({path:'assets/screenshots/latest.png',fullPage:true,animations:'disabled'});
- console.log('Saved assets/screenshots/latest.png');
+ // Verify that the same JSON index also drives a complete offline library.
+ await page.evaluate(()=>navigator.serviceWorker.ready);
+ await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+ const titles=await page.evaluate(async()=>{
+  const files=await fetch('songs/library.json').then(response=>response.json());
+  return Promise.all(files.map(async file=>{
+   const url=new URL(`songs/${file}`,location.href).href;
+   const response=await caches.match(url);
+   if(!response)throw Error(`Song missing from offline cache: ${file}`);
+   return (await response.json()).title;
+  }));
+ });
+ await page.context().setOffline(true);
+ await page.reload({waitUntil:'networkidle'});
+ await page.waitForFunction(()=>document.querySelectorAll('.key').length===88&&!document.querySelector('#play').disabled);
+ const buttons=page.locator('#songs .song');
+ if(await buttons.count()!==titles.length)throw Error('Offline library is incomplete');
+ for(let i=0;i<titles.length;i++){
+  await buttons.nth(i).click();
+  await page.waitForFunction(title=>document.querySelector('#score-title').textContent===title&&!document.querySelector('#play').disabled,titles[i]);
+  if(await page.locator('.key').count()!==88)throw Error(`Offline keyboard missing for ${titles[i]}`);
+ }
+ if(errors.length)throw Error(errors.join('\n'));
+ console.log(`Saved assets/screenshots/latest.png; all ${titles.length} JSON songs open offline.`);
 }finally{
  await browser?.close();
  await new Promise(resolve=>server.close(resolve));

@@ -1,4 +1,4 @@
-import furElise from '../songs/fur-elise.json' with {type:'json'};
+import library from '../songs/library.json' with {type:'json'};
 export const names = ['C','D','E','F','G','A','B'];
 export function midi(note) {
   const m=/^([A-G])([#b]?)([0-8])$/.exec(note);
@@ -58,31 +58,11 @@ export function validateSong(song) {
   });
   return song;
 }
-function melody(title,composer,sequence,tempo=76,timeSignature='4/4') {
-  const events=sequence.split(' ').map(token=>{
-    const [pitch,beats='1']=token.split(':');
-    return {beats:+beats,right:{notes:[{pitch}]}};
-  });
-  return {version:1,title,composer,category:'melody',tempo,timeSignature,events};
-}
-export const songs = [
- melody('Ode to Joy','Ludwig van Beethoven · 1824','E4 E4 F4 G4 G4 F4 E4 D4 C4 C4 D4 E4 E4:1.5 D4:0.5 D4:2 E4 E4 F4 G4 G4 F4 E4 D4 C4 C4 D4 E4 D4:1.5 C4:0.5 C4:2'),
- melody('Hot Cross Buns','Traditional · English folk tune','E4 D4 C4:2 E4 D4 C4:2 C4:0.5 C4:0.5 C4:0.5 C4:0.5 D4:0.5 D4:0.5 D4:0.5 D4:0.5 E4 D4 C4:2'),
- melody('Mary Had a Little Lamb','Traditional · 19th-century melody','E4 D4 C4 D4 E4 E4 E4:2 D4 D4 D4:2 E4 G4 G4:2 E4 D4 C4 D4 E4 E4 E4 E4 D4 D4 E4 D4 C4:4'),
- melody('Twinkle, Twinkle, Little Star','Traditional · French melody, 18th century','C4 C4 G4 G4 A4 A4 G4:2 F4 F4 E4 E4 D4 D4 C4:2 G4 G4 F4 F4 E4 E4 D4:2 G4 G4 F4 F4 E4 E4 D4:2 C4 C4 G4 G4 A4 A4 G4:2 F4 F4 E4 E4 D4 D4 C4:2',68),
- {version:1,title:'First chords · C, F & G',composer:'Songbird · original exercise',category:'chords',tempo:50,timeSignature:'4/4',events:['C','F','G','C'].map(root=>{const left=handPitches(root+'3','left'),right=handPitches(root+'4','right');return {beats:4,left:{notes:[left[0],left[2],left[4]].map(({pitch})=>({pitch}))},right:{notes:[right[0],right[2],right[4]].map(({pitch})=>({pitch}))}};})},
- {version:1,title:'Together in C',composer:'Songbird · original exercise',category:'chords',tempo:60,timeSignature:'4/4',events:['C4','D4','E4','G4','E4','D4','C4'].map(pitch=>({beats:2,left:{notes:[{pitch:'C3'},{pitch:'E3'},{pitch:'G3'}]},right:{notes:[{pitch}]}}))},
- melody('Symphony No. 5 - opening','Ludwig van Beethoven - simplified, transposed excerpt','E4:0.5 E4:0.5 E4:0.5 C4:3 D4:0.5 D4:0.5 D4:0.5 B3:3 E4:0.5 E4:0.5 E4:0.5 C4:1 F4:0.5 F4:0.5 F4:0.5 E4:1 C5:0.5 C5:0.5 C5:0.5 G4:3',92,'2/4'),
- melody('Spring - The Four Seasons','Antonio Vivaldi - simplified theme in C','E4 G4 G4 G4 F4:0.5 E4:0.5 D4:2 C4:0.5 G4:0.5 G4:0.5 G4:0.5 F4:0.5 E4:0.5 D4:2 C4:0.5 G4:0.5 G4:0.5 G4:0.5 A4:0.5 G4:0.5 F4:0.5 E4:0.5 F4 G4 F4:0.5 E4:0.5 D4 C4:2',96),
- melody('Brahms Lullaby','Johannes Brahms - simplified theme in C','E4:0.5 E4:0.5 G4:3 E4:0.5 E4:0.5 G4:3 E4:0.5 G4:0.5 C5:2 B4 A4:2 A4 G4:2 D4:0.5 E4:0.5 F4:2 D4 D4:0.5 E4:0.5 F4:3 D4:0.5 F4:0.5 B4 A4 G4 B4 C5:3',66,'3/4'),
- {version:1,title:'C scale & octave chords',composer:'Songbird - original exercise',category:'chords',tempo:60,timeSignature:'4/4',events:[
-  ...['C4','D4','E4','F4','G4','A4','B4','C5'].map(pitch=>({beats:1,right:{notes:[{pitch}]}})),
-  {beats:1},
-  ...['A4','B4','C5'].map(top=>({beats:2,left:{notes:[{pitch:'C3'},{pitch:'G3'}]},right:{notes:[{pitch:'C4'},{pitch:top}]}})),
-  {beats:4,right:{notes:[{pitch:'C4'},{pitch:'E4'},{pitch:'G4'}]}}
- ]}
- ,furElise
-];
+// Library order and song content live in JSON; fingering is generated below.
+export const songs=await Promise.all(library.map(async file=>{
+  const {default:song}=await import(new URL(`../songs/${file}`,import.meta.url).href,{with:{type:'json'}});
+  return song;
+}));
 songs.forEach(validateSong);
 
 // Five ordered fingers can occupy any five of up to eight white keys.

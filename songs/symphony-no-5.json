@@ -1,0 +1,230 @@
+{
+  "version": 2,
+  "title": "Symphony No. 5 - opening",
+  "composer": "Ludwig van Beethoven - simplified, transposed excerpt",
+  "category": "melody",
+  "tempo": 92,
+  "timeSignature": "2/4",
+  "events": [
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 3,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 3,
+      "right": {
+        "notes": [
+          {
+            "pitch": "B3",
+            "duration": 3
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "F4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "F4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "F4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C5",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C5",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C5",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 3,
+      "right": {
+        "notes": [
+          {
+            "pitch": "G4",
+            "duration": 3
+          }
+        ]
+      }
+    }
+  ]
+}

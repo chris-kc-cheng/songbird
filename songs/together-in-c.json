@@ -1,0 +1,199 @@
+{
+  "version": 2,
+  "title": "Together in C",
+  "composer": "Songbird · original exercise",
+  "category": "chords",
+  "tempo": 60,
+  "timeSignature": "4/4",
+  "events": [
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "E3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "E3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "E3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "E3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "G4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "E3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "E3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "left": {
+        "notes": [
+          {
+            "pitch": "C3",
+            "duration": 2
+          },
+          {
+            "pitch": "E3",
+            "duration": 2
+          },
+          {
+            "pitch": "G3",
+            "duration": 2
+          }
+        ]
+      },
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 2
+          }
+        ]
+      }
+    }
+  ]
+}

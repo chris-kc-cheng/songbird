@@ -1,0 +1,197 @@
+{
+  "version": 2,
+  "title": "Hot Cross Buns",
+  "composer": "Traditional · English folk tune",
+  "category": "melody",
+  "tempo": 76,
+  "timeSignature": "4/4",
+  "events": [
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 2
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 0.5,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "E4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 1,
+      "right": {
+        "notes": [
+          {
+            "pitch": "D4",
+            "duration": 1
+          }
+        ]
+      }
+    },
+    {
+      "beats": 2,
+      "right": {
+        "notes": [
+          {
+            "pitch": "C4",
+            "duration": 2
+          }
+        ]
+      }
+    }
+  ]
+}
